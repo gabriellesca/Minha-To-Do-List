@@ -68,7 +68,7 @@ Projeto desenvolvido para praticar manipulação dinâmica do DOM e persistênci
 
 ```bash
 # Clone o repositório
-git clone git clone https://github.com/gabriellesca/Minha-To-Do-List.git
+git clone https://github.com/gabriellesca/Minha-To-Do-List.git
 cd Minha-To-Do-List
 
 # Entre na pasta
