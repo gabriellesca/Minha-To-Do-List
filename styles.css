@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* ── Variáveis ────────────────────────────────────── */
+:root {
+  --creme:      #f7f3ee;
+  --papel:      #fffdf9;
+  --borda:      #e8e0d5;
+  --texto:      #2d2520;
+  --texto-2:    #9e8f85;
+  --verde:      #3d7a5e;
+  --verde-esc:  #2d5c47;
+  --vermelho:   #c0392b;
+  --sombra:     rgba(45, 37, 32, 0.08);
+}
+
+/* ── Reset ────────────────────────────────────────── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ── Body ─────────────────────────────────────────── */
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--creme);
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(61,122,94,0.06) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(192,57,43,0.04) 0%, transparent 50%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* ── Container ────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: 420px;
+  background: var(--papel);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow:
+    0 2px 0 var(--borda),
+    0 12px 40px var(--sombra),
+    0 40px 80px rgba(45,37,32,0.04);
+  border: 1px solid var(--borda);
+  opacity: 0;
+  animation: surgir 0.5s ease forwards;
+}
+
+/* ── Título ───────────────────────────────────────── */
+h1 {
+  font-family: 'Lora', serif;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: var(--texto);
+  text-align: center;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.01em;
+}
+
+.subtitulo {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--texto-2);
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ── Linha decorativa ─────────────────────────────── */
+.divisor {
+  width: 40px;
+  height: 2px;
+  background: var(--verde);
+  margin: 0.5rem auto 1.5rem;
+  border-radius: 2px;
+}
+
+/* ── Input area ───────────────────────────────────── */
+.input-area {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 1.5rem;
+}
+
+#taskInput {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid var(--borda);
+  border-radius: 10px;
+  background: var(--creme);
+  color: var(--texto);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#taskInput::placeholder {
+  color: var(--texto-2);
+  font-style: italic;
+  font-weight: 300;
+}
+
+#taskInput:focus {
+  border-color: var(--verde);
+  box-shadow: 0 0 0 3px rgba(61,122,94,0.12);
+  background: var(--papel);
+}
+
+#addTask {
+  padding: 0.75rem 1.1rem;
+  background: var(--verde);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  line-height: 1;
+}
+
+#addTask:hover {
+  background: var(--verde-esc);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(61,122,94,0.3);
+}
+
+#addTask:active {
+  transform: translateY(0);
+}
+
+/* ── Contador ─────────────────────────────────────── */
+.contador {
+  font-size: 0.75rem;
+  color: var(--texto-2);
+  text-align: right;
+  margin-bottom: 0.75rem;
+  font-weight: 300;
+}
+
+/* ── Lista de tarefas ─────────────────────────────── */
+#taskList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ── Item de tarefa ───────────────────────────────── */
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: var(--creme);
+  border: 1.5px solid var(--borda);
+  border-radius: 10px;
+  gap: 10px;
+  animation: entrar 0.3s ease forwards;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+li:hover {
+  border-color: #d4c9be;
+  box-shadow: 0 2px 8px var(--sombra);
+}
+
+li span {
+  flex: 1;
+  font-size: 0.9rem;
+  color: var(--texto);
+  cursor: pointer;
+  font-weight: 400;
+  line-height: 1.4;
+  transition: color 0.2s, opacity 0.2s;
+  user-select: none;
+}
+
+li span:hover {
+  color: var(--verde);
+}
+
+/* ── Tarefa concluída ─────────────────────────────── */
+.completed {
+  text-decoration: line-through;
+  opacity: 0.45 !important;
+  color: var(--texto-2) !important;
+}
+
+/* ── Botão remover ────────────────────────────────── */
+li button {
+  background: transparent;
+  border: 1.5px solid var(--borda);
+  color: var(--texto-2);
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li button:hover {
+  background: #fff0ee;
+  border-color: var(--vermelho);
+  color: var(--vermelho);
+}
+
+/* ── Estado vazio ─────────────────────────────────── */
+.vazio {
+  text-align: center;
+  padding: 2rem 0 1rem;
+  color: var(--texto-2);
+  font-size: 0.85rem;
+  font-style: italic;
+  font-family: 'Lora', serif;
+}
+
+/* ── Animações ────────────────────────────────────── */
+@keyframes surgir {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes entrar {
+  from { opacity: 0; transform: translateX(-10px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
