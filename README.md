@@ -18,7 +18,8 @@
 
 > *Lista de tarefas com criação, conclusão, remoção e persistência automática no navegador*
 
-![Preview do projeto](preview.png)
+<img width="613" height="477" alt="image" src="https://github.com/user-attachments/assets/e9063170-0372-4edb-b515-7ff9f95c47b5" />
+
 
 ---
 
