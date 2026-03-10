@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://gabriellesca.github.io/todo-list/" target="_blank">
+  <a href="https://gabriellesca.github.io/Minha-To-Do-List/" target="_blank">
     <img src="https://img.shields.io/badge/🚀 Ver%20projeto%20ao%20vivo-3d7a5e?style=for-the-badge" alt="Demo" />
   </a>
 </p>
@@ -67,10 +67,10 @@ Projeto desenvolvido para praticar manipulação dinâmica do DOM e persistênci
 
 ```bash
 # Clone o repositório
-git clone https://github.com/gabriellesca/todo-list.git
+git clone https://github.com/gabriellesca/Minha-To-Do-List.git
 
 # Entre na pasta
-cd todo-list
+cd Minha-To-Do-List
 
 # Abra o index.html no navegador
 # Ou use a extensão Live Server no VS Code
@@ -103,4 +103,4 @@ cd todo-list
 Desenvolvido por **Gabrielle Simone** — Estudante de Engenharia de Software com foco em front-end.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gabriellesca)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/gabriellesca/todo-list)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/gabriellesca/Minha-To-Do-List)
