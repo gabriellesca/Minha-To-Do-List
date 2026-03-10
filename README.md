@@ -1,4 +1,4 @@
-<h1 align="center">✅ To-Do List</h1>
+<h1 align="center">✅ Minha-To-Do-List</h1>
 
 <p align="center">
   Aplicação de lista de tarefas desenvolvida com HTML, CSS e JavaScript puro — com persistência de dados via LocalStorage.
